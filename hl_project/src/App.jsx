@@ -1,32 +1,36 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
-import Features from './components/FeaturesSection/Features'
-import Testimonial from './components/Testimonialsection/Testimonial'
-import Courses from './components/CoursesSection/Courses'
-import WhyUs from './components/WhyusSection/Whyus'
-import ContactUs from './components/ContactSection/Contact'
-import Footer from './components/FooterSection/Footer'
+import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Aboutus from './pages/Aboutus/Aboutus';
+import OurCourses from './pages/Courses/OurCourses';
+import Contactus from './pages/Contact/Contactus';
+import Login from './pages/loginpage/Login';
+
 
 
 const App = () => {
+
   return (
 <>
-      <Navbar />
-      <div>
-      <Hero /> 
-      <Courses />
-      <Features /> 
-      <WhyUs/>
-      <Testimonial/>
-      <ContactUs/>
-      <Footer/>
+   <Router>
+     <Routes>
+      <Route exact path='/'element={<Home/>}/>
+      <Route path='/aboutus' element={<Aboutus/>}/>
+    <Route path='/courses' element={<OurCourses/>}/>
+     <Route path='/contactus' element={<Contactus/>}/>
+     <Route path='/login'element={<Login/>}/>
+       </Routes>
+    </Router>
+     
+
+
+      
   
       
     
       
       
-      </div>
+      
       
     
       </>

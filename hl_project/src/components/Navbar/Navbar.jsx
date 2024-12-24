@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { IoMdLogIn } from "react-icons/io";
 import { IoIosCall } from "react-icons/io";
 import logo1 from "../../assets/logo.png";
+import { Link, Navigate, useNavigate } from 'react-router';
 
 const Navbar = () => {
   // State to manage dropdown visibility for "Contact Us"
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className='fixed top-0 z-50 backdrop-blur-lg border-b border-neutral-700/80 w-full bg-black text-white'>
@@ -18,19 +20,19 @@ const Navbar = () => {
           <ul className='hidden lg:flex ml-14 space-x-12'>
             {/* Home Button without Dropdown */}
             <li className='hover:text-orange-600 cursor-pointer'>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
 
             {/* About us Button without Dropdown */}
             <li className='hover:text-orange-600 cursor-pointer'>
-              <a href="#about-us">About us</a>
+              <Link  to="/aboutus">About us</Link>
             </li>
 
             <li className='hover:text-orange-600'>
-              <a href='#courses'>Courses</a>
+              <Link to='/courses'>Courses</Link>
             </li>
             <li className='hover:text-orange-600'>
-              <a href='#contact-us'>Contact us</a>
+              <Link to='/contactus'>Contact us</Link>
             </li>
           </ul>
 
@@ -62,7 +64,7 @@ const Navbar = () => {
                     Hltech@gmail.com
                   </a>
                   <div className="mt-2">
-                    <a href="/contact-form" className="text-slate-600 text-sm block">
+                    <a href="/Contactus" className="text-slate-600 text-sm block">
                       Contact Form
                     </a>
                   </div>
@@ -74,7 +76,8 @@ const Navbar = () => {
           {/* Login Button */}
           <div className="flex items-center gap-1 px-9 py-5 -mr-10 rounded text-white hover:text-blue-800 hover:bg-blue-50 font-semibold">
             <IoMdLogIn className="hover:text-blue-800" size={15} />
-            <button className="hover:text-blue-800">
+            <button onClick={()=> navigate("/login")}
+            className="hover:text-blue-800">
               Login
             </button>
           </div>

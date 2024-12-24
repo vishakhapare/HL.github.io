@@ -18,7 +18,7 @@ const Hero = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-
+    
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between h-full sm:px-6 lg:px-8">
         {/* Left Content */}

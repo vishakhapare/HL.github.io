@@ -1,142 +1,94 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  // Handle form data changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted", formData);
-    setSubmitted(true);
-  };
-
+const ContactUs = () => {
   return (
-    <section className="bg-gray-300 py-12 px-6 mt-14">
-      <div className="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-lg w-[40%] mr-4">
-        <h2 className="text-4xl font-extrabold text-orange-600 text-center mb-6">
-          Get In Touch
-        </h2>
-        <p className="text-gray-900 text-center mb-10">
-          Have a question or just want to say hello? We'd love to hear from you!
-        </p>
-        {!submitted ? (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Full Name */}
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center p-8 text-white"
+      style={{
+        backgroundImage:
+          "url('https://img.freepik.com/free-photo/cybersecurity-expert-using-laptop-look-company-security-vulnerabilities_482257-101130.jpg')", // Replace with the actual image URL
+      }}
+    >
+      <div className="bg-black/75 w-full max-w-6xl p-8 rounded-lg shadow-lg h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Section */}
+          <div className="space-y-6">
+            <h2 className="text-4xl font-bold">Get in Touch</h2>
+            <p className="text-sm text-gray-400">Images from Freepik</p>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4">
+                <span className="text-yellow-500 text-2xl">📞</span>
+                <div>
+                  <p>Call Us</p>
+                  <p className="text-gray-400">
+                       091990 25109
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <span className="text-yellow-500 text-2xl">📍</span>
+                <div>
+                  <p>Location</p>
+                  <p className="text-gray-400">
+                  H.N 78, in front of Classic Gallery, Indrapuri C sector, Sector C, Indrapuri, Bhopal, Madhya Pradesh 462022
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <span className="text-yellow-500 text-2xl">⏰</span>
+                <div>
+                  <p>Business Hours</p>
+                  <p className="text-gray-400">
+                    Mon – Sat ..... 10 am – 6 pm, Sun ....... Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter your Name"
+                  className="w-full p-3 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-400"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Enter a valid email address"
+                  className="w-full p-3 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-400"
+                />
+              </div>
+            </div>
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-800 mb-2"
-              >
-                Full Name
-              </label>
               <input
                 type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring focus:ring-blue-300 focus:outline-none"
-                placeholder="Your Name"
+                placeholder="Enter your address"
+                className="w-full p-3 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-400"
               />
             </div>
-
-            {/* Email Address */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-800 mb-2"
-              >
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring focus:ring-blue-300 focus:outline-none"
-                placeholder="Your Email"
-              />
-            </div>
-
-            {/* Subject */}
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-800 mb-2"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring focus:ring-blue-300 focus:outline-none"
-                placeholder="Subject"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-800 mb-2"
-              >
-                Message
-              </label>
               <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="5"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring focus:ring-blue-300 focus:outline-none"
-                placeholder="Write your message here..."
+                placeholder="Enter your message"
+                rows="4"
+                className="w-full p-3 bg-transparent border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-400"
               ></textarea>
             </div>
-
-            {/* Submit Button */}
-            <div className="text-center">
-              <button
-                type="submit"
-                className="w-full py-3 px-6  bg-orange-600 text-white font-semibold rounded-xl hover:bg-green-600  focus:outline-none"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        ) : (
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-green-500">
-              Thank you for your message!
-            </h3>
-            <p className="text-gray-600 mt-2">
-              We’ll get back to you as soon as possible.
-            </p>
+            <button
+              type="submit"
+              className="w-full bg-orange-600 text-black font-semibold py-3 rounded hover:bg-green-600 transition"
+            >
+              Send a request
+            </button>
           </div>
-        )}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ContactForm;
+export default ContactUs;
