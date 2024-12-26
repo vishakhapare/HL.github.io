@@ -6,7 +6,7 @@ const ContactUs = () => {
       className="flex items-center justify-center min-h-screen bg-cover bg-center p-8 text-white"
       style={{
         backgroundImage:
-          "url('https://img.freepik.com/free-photo/cybersecurity-expert-using-laptop-look-company-security-vulnerabilities_482257-101130.jpg')", // Replace with the actual image URL
+          "url('https://banfflakelouise.bynder.com/m/5b66f018cbb3e81c/2000x1080_jpg-2022_VermillionLakes_Landscape_ROAMCreative.jpg')", // Replace with the actual image URL
       }}
     >
       <div className="bg-black/75 w-full max-w-6xl p-8 rounded-lg shadow-lg h-full">

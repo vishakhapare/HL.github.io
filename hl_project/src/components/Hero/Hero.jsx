@@ -3,7 +3,7 @@ import video from "../../assets/video1.mp4";
 
 const Hero = () => {
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden px-72">
       {/* Background Video */}
       <video
         autoPlay
@@ -23,23 +23,23 @@ const Hero = () => {
       <div className="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between h-full sm:px-6 lg:px-8">
         {/* Left Content */}
         <div className="text-white max-w-lg md:w-1/2">
-          <h1 className="text-6xl mt-16 font-medium"> Full Stack Web Development Job Bootcamp
+          <h1 className="text-4xl mt-16 font-medium -ml-52"> Full Stack Web Development Job Bootcamp
            
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-400 -mr-52">
+          <p className="mt-4 text-lg md:text-xl text-gray-400 -ml-52">
             Choose MERN stack or Spring Boot and acquire expertise<br />
             through practical application and real-world projects.
           </p>
 
           {/* New Stats Section */}
-          <div className="flex justify-between mt-8 bg-zinc-800 py-3 px-1 w-[95%] rounded-lg text-center text-white">
+          <div className="flex justify-between mt-8 bg-zinc-800 px-3 py-2 rounded-lg text-center text-white -ml-52 h-20">
             <div className="flex-1">
               <p className="text-2xl font-medium">95%</p>
-              <p className="text-sm">Placement Rate</p>
+              <p className="text-sm -ml-5">Placement Rate</p>
             </div>
             <div className="flex-1 border-l border-gray-700">
               <p className="text-2xl font-medium">1200+</p>
-              <p className="text-sm">Hiring Partners</p>
+              <p className="text-sm -ml-5">Hiring Partners</p>
             </div>
             <div className="flex-1 border-l border-gray-700">
               <p className="text-2xl font-medium">128%</p>
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
 
           {/* Features */}
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-3 -ml-52">
             <div className="flex flex-wrap mt-8 items-center space-x-3">
               <span className="flex items-center space-x-2 bg-zinc-800 text-white w-60 px-4 py-2 rounded-full text-md font-thin">
                 <svg
@@ -112,7 +112,7 @@ const Hero = () => {
         </div>
 
         {/* Right Form */}
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full md:w-1/3 max-w-md -mr-11 mt-32">
+        <div className="bg-white rounded-lg shadow-lg p-6 min-w-96 md:w-1/3 max-w-full -mr-60 mt-32">
           <h2 className="text-xl font-bold mb-4 text-gray-800">
             Book a <span className="text-orange-600">free live webinar</span>
           </h2>

@@ -6,6 +6,7 @@ import Testimonial from '../../components/Testimonialsection/Testimonial';
 import Layout from '../../components/Layout/Layout';
 import Courses from '../../components/CoursesSection/Courses';
 import ContactForm from '../../components/ContactSection/Contact';
+import Faq from '../../components/FAQsection/Faq';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <WhyUs/>
       <ContactForm/>
       <Testimonial/>
+      <Faq/>
       </Layout>
     </div>
   )
