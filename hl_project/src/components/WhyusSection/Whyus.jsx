@@ -71,7 +71,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-gray-300">
       <div className="container mx-auto px-4">
       <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
           Why<span className="text-orange-600">Choose us?</span>

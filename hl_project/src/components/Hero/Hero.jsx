@@ -3,6 +3,7 @@ import video from "../../assets/video1.mp4";
 
 const Hero = () => {
   return (
+    // Hero Section
     <div className="relative w-screen h-screen overflow-hidden px-72">
       {/* Background Video */}
       <video
@@ -205,6 +206,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

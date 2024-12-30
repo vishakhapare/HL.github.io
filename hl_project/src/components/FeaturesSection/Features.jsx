@@ -8,14 +8,14 @@ import { MdVpnLock } from "react-icons/md";
 
 const Features = () => {
   return (
-    <div className="relative ml-0 overflow-hidden object-cover  mt-14 border-b w-screen border-neutral-800 min-h-[800px] bg-gray-200">
+    <div className="relative ml-0 overflow-hidden object-cover  mt-14 border-b w-screen border-neutral-800 min-h-[800px] bg-gray-300">
       <div className="text-center">
         <span className="bg-neutral-900 text-orange-600 rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
           Features
         </span>
-        <h2 className="text-3xl sm:text-6xl mt-10 lg:mt-20 tracking-wide">
+        <h2 className="text-3xl sm:text-6xl mt-10 lg:mt-20 tracking-wide font-bold">
           Easily build
-          <span className="bg-gradient-to-r from-orange-600 to-orange-800 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-orange-600 to-orange-800 text-transparent bg-clip-text font-bold">
             {" "}your code
           </span>
         </h2>
@@ -81,3 +81,4 @@ const Features = () => {
 };
 
 export default Features;
+

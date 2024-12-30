@@ -1,5 +1,11 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
+import photo1 from "../../assets/py1.jpeg";
+import photo2 from "../../assets/web2.jpeg";
+import photo3 from "../../assets/react3.jpg";
+import photo4 from "../../assets/ds4.jpeg";
+import photo5 from "../../assets/java5.png"; 
+import photo6 from "../../assets/app7.jpg";
 
 const OurCourses = () => {
   const courses = [
@@ -7,51 +13,50 @@ const OurCourses = () => {
       id: 1,
       title: "Introduction to Python",
       description: "Learn the basics of Python programming.",
-      image: "https://i.pinimg.com/originals/6a/fb/f4/6afbf45910b9b4c344737f76043d2cbc.jpg",
+      image: photo1, // Use the variable directly
       duration: "8 weeks",
     },
-    
     {
       id: 2,
       title: "Web Development",
       description: "Master HTML, CSS, and JavaScript to build stunning websites.",
-      image: "https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg",
+      image: photo2, // Use the variable directly
       duration: "12 weeks",
     },
     {
       id: 3,
       title: "React for Beginners",
       description: "A comprehensive guide to building apps with React.",
-      image: "https://elazizi.com/images/react-native-libraries.png",
+      image: photo3, // Use the variable directly
       duration: "10 weeks",
     },
     {
       id: 4,
       title: "Data Science",
       description: "Dive into data analysis and machine learning with Python.",
-      image: "https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGF0YSUyMHNjaWVuY2V8ZW58MHx8MHx8fDA%3D",
+      image: photo4, // Use the variable directly
       duration: "14 weeks",
     },
     {
       id: 5,
       title: "Introduction to Java",
       description: "Learn the basics of Java programming.",
-      image: "https://4kwallpapers.com/images/wallpapers/java-black-2560x1440-16069.png",
+      image: photo5, // Use the variable directly
       duration: "8 weeks",
     },
     {
       id: 6,
       title: "Introduction to App Development",
       description: "Learn an App Development.",
-      image: "https://img.freepik.com/free-photo/smartphone-with-user-interface-concept_52683-104212.jpg",
+      image: photo6, // Use the variable directly
       duration: "8 weeks",
     },
   ];
 
   return (
     <Layout>
-      <section className="py-12 bg-gray-100">
-        <div className="container mx-auto px-4">
+      <section className="py-12 px-72 bg-gray-100">
+        <div className="container mx-auto px-4 w-[200%] -ml-64">
           <h2 className="text-4xl font-bold text-center  mb-8 mt-16 text-orange-600">
             Our Courses
           </h2>
@@ -65,7 +70,7 @@ const OurCourses = () => {
                 }}
               >
                 <img
-                  src={course.image}
+                  src={course.image} // Correctly reference the image property
                   alt={course.title}
                   className="w-full h-48 object-cover"
                 />

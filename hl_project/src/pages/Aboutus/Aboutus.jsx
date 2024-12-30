@@ -1,76 +1,139 @@
-import React from 'react';
-import Layout from '../../components/Layout/Layout';
+import React from "react";
+import { motion } from "framer-motion"; // For animations
+import Layout from "../../components/Layout/Layout";
+
 
 const About = () => {
   return (
     <Layout>
-    <section className="relative bg-white py-24 h-screen w-screen">
-      {/* Background Illustration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-white to-blue-100"></div>
-      <div className="relative container mx-auto px-6 md:px-12">
-        {/* Main Title */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold">
-            Who 
-            <span className="bg-gradient-to-r from-orange-600 to-orange-800 text-transparent bg-clip-text">
-            {" "}We are
-          </span>
-          </h2>
-          <p className="mt-4 text-gray-900 font-semibold text-lg max-w-2xl mx-auto">
-            At HL Tech, we innovate and empower businesses with cutting-edge technology 
-            solutions. Discover our story and what drives us forward.
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300 text-gray-800 px-6 py-28">
+      {/* Header Section */}
+      <motion.h1
+        className="text-4xl font-bold text-center mb-6 text-orange-600"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        About Us
+      </motion.h1>
+
+      {/* Introduction Section */}
+      <motion.div
+        className="max-w-4xl text-center mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        <p className="text-lg font-semibold leading-relaxed">
+          Welcome to our company! We are dedicated to delivering top-notch
+          services and creating innovative solutions for our clients. Our team
+          is passionate, skilled, and committed to excellence in every project
+          we undertake.
+        </p>
+      </motion.div>
+
+      {/* Features Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+        {/* Feature 1 */}
+        <motion.div
+          className="bg-white p-6 rounded-lg shadow-lg"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+        >
+          <h3 className="text-2xl font-semibold mb-3 text-green-600">Our Mission</h3>
+          <p className="text-gray-800 font-medium">
+            To provide exceptional services and solutions that help our clients
+            achieve their goals.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Content Section */}
-        <div className="mt-12 flex flex-col lg:flex-row items-center lg:items-start">
-          {/* Image Section */}
-          <div className="lg:w-1/2">
-            <img
-              src="https://thumbs.dreamstime.com/b/smiling-professional-business-leaders-employees-group-team-portrait-coaches-mentors-posing-together-diverse-office-141681202.jpg"
-              alt="HL Tech Team"
-              className="rounded-sm shadow-lg"
-            />
-          </div>
+        {/* Feature 2 */}
+        <motion.div
+          className="bg-white p-6 rounded-lg shadow-lg"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+        >
+          <h3 className="text-2xl font-semibold mb-3 text-blue-600">Our Vision</h3>
+          <p className="text-gray-800 font-medium">
+            To become a global leader in our industry by fostering innovation
+            and building long-lasting relationships.
+          </p>
+        </motion.div>
 
-          {/* Text Content */}
-          <div className="lg:w-1/2 lg:pl-12 mt-8 lg:mt-0">
-            <h3 className="text-2xl font-semibold">
-              Our Journey
-            </h3>
-            <p className="mt-4 text-gray-900 font-medium">
-              Founded in innovation, HL Tech has grown into a global leader in technology solutions.
-              From software development to IT consulting, we strive to deliver unmatched value and 
-              excellence in every project.
-            </p>
-
-            <h3 className="mt-8 text-2xl font-semibold">
-              Why Choose Us
-            </h3>
-            <ul className="mt-4 space-y-3 text-gray-900 font-medium">
-              <li className="flex items-start">
-                <span className="bg-blue-500 text-white p-1 rounded-full mr-4">
-                  ✔
-                </span>
-                Dedicated teams of technology experts.
-              </li>
-              <li className="flex items-start">
-                <span className="bg-blue-500 text-white p-1 rounded-full mr-4">
-                  ✔
-                </span>
-                Commitment to innovation and client success.
-              </li>
-              <li className="flex items-start">
-                <span className="bg-blue-500 text-white p-1 rounded-full mr-4">
-                  ✔
-                </span>
-                Proven track record in delivering solutions.
-              </li>
-            </ul>
-          </div>
-        </div>
+        {/* Feature 3 */}
+        <motion.div
+          className="bg-white p-6 rounded-lg shadow-lg"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.1, duration: 0.8 }}
+        >
+          <h3 className="text-2xl font-semibold mb-3 text-purple-600">Our Values</h3>
+          <p className="text-gray-800 font-medium">
+            Integrity, innovation, and customer-centricity drive our every
+            decision and action.
+          </p>
+        </motion.div>
       </div>
-    </section>
+
+      {/* Team Section */}
+      <motion.div
+        className="mt-16 text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.3, duration: 1 }}
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-gray-900">Meet Our Team</h2>
+        <p className="text-gray-800 font-medium mb-8">
+          A diverse group of experts working together to achieve great results.
+        </p>
+        <div className="flex flex-wrap justify-center gap-6">
+          {/* Example team members */}
+          <motion.div
+            className="w-40 text-center"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img
+              src="https://fortune.com/img-assets/wp-content/uploads/2024/09/GettyImages-2170596573-e1727191861209.jpg?w=1440&q=75"
+              alt="Team Member"
+              className="w-full h-40 object-cover rounded-full mb-3"
+            />
+            <h4 className="text-lg font-semibold">Alice Johnson</h4>
+            <p className="text-sm text-gray-700">CEO</p>
+          </motion.div>
+
+          <motion.div
+            className="w-40 text-center"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/A1DxElSG8gL._SY600_.jpg"
+              alt="Team Member"
+              className="w-full h-40 object-cover rounded-full mb-3"
+            />
+            <h4 className="text-lg font-semibold">Mark Smith</h4>
+            <p className="text-sm text-gray-700">CTO</p>
+          </motion.div>
+
+          <motion.div
+            className="w-40 text-center"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCfox7fHlhN8om8LEAXy2gTNj4Dnk2Y0JM9w&s"
+              alt="Team Member"
+              className="w-full h-40 object-cover rounded-full mb-3"
+            />
+            <h4 className="text-lg font-semibold">Emily Davis</h4>
+            <p className="text-sm text-gray-700">Design Lead</p>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
     </Layout>
   );
 };
