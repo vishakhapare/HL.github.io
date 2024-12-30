@@ -12,7 +12,7 @@ const App = () => {
 
   return (
 <>
-   <Router>
+   <Router basename='/hl_project'>
      <Routes>
       <Route exact path='/'element={<Home/>}/>
       <Route path='/aboutus' element={<Aboutus/>}/>
